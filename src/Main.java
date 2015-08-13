@@ -12,11 +12,18 @@ public class Main {
 
         PC thePC = new PC(theCase, theMonitor, theMotherboard);
 
+        thePC.powerUp();
+
+
+        /*
+        Note: These codes won't work anymore since I deleted the getters in PC.java.
+
         thePC.getMonitor().drawPixelAt(1500, 1200, "red");
 
         thePC.getMotherboard().loadProgram("Windows 1.0");
 
         thePC.getTheCase().pressPowerButton();
+        */
     }
 
 }

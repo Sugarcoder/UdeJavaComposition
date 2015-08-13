@@ -12,15 +12,34 @@ public class PC {
     }
 
 
-    public Case getTheCase() {
+    public void powerUp() {
+        theCase.pressPowerButton();       // use 'theCase' directly instead of 'getTheCase()'
+        drawLogo();
+    }
+
+    private void drawLogo() {
+        // Fancy graphics
+        monitor.drawPixelAt(1200, 50, "yellow");    // you can use getMonitor().  (access 'monitor' directly)
+    }
+
+
+
+    /*
+
+    Note: No need to use getters if accessing variables directly.
+
+    private Case getTheCase() {
         return theCase;
     }
 
-    public Monitor getMonitor() {
+    private Monitor getMonitor() {
         return monitor;
     }
 
-    public Motherboard getMotherboard() {
+    private Motherboard getMotherboard() {
         return motherboard;
     }
+
+    */
+
 }
